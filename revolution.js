@@ -11,9 +11,8 @@ const abi = [{"inputs":[{"internalType":"uint256","name":"_numSodas","type":"uin
 
 var contract = new ethers.Contract(address, abi, wallet);
 
-contract.purchase({
+contract.revolution({
     gasLimit: 50000,
-    value: 1000000000000000,
 }).then((intermediateTx) => {
     console.log(intermediateTx);
     return intermediateTx.wait();
